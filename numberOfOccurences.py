@@ -1,8 +1,8 @@
 import sys
+input = sys.stdin.read
 
 
 def count_occurrences():
-    input = sys.stdin.read
     data = input().splitlines()
     
     N = int(data[0])
@@ -24,17 +24,17 @@ def count_occurrences():
         return -1
     
     def find_last_occurrence(arr, x):
-        low, high = 0, len(arr) - 1
-        while low <= high:
-            mid = (low + high) // 2
+        lo, hi = 0, len(arr) - 1
+        while lo <= hi:
+            mid = (lo + hi) // 2
             if arr[mid] < x:
-                low = mid + 1
+                lo = mid + 1
             elif arr[mid] > x:
-                high = mid - 1
+                hi = mid - 1
             else:
                 if mid == len(arr) - 1 or arr[mid + 1] != x:
                     return mid
-                low = mid + 1
+                lo = mid + 1
         return -1
     
     results = []
