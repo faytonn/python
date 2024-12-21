@@ -1,8 +1,0 @@
-cheetah
-crocodile
-hippo
-kangaroo
-lion
-tiger
-walrus
-zebra
